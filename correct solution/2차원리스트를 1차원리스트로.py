@@ -12,11 +12,18 @@
 
 mylist = [['A', 'B'], ['X', 'Y'], ['1']]
 
-# SOLUTION 1
+
+
+# SOLUTIONS
+# 1 : sum함수
+
+
+
+# SOLUTION  : sequence type의 operations 사용
 def solution(mylist):
     answer = []
     for iter in mylist:
-        answer += iter
+        answer += iter # iterator type 중 sequence type의 operations들을 사용
     return answer
 
 print(solution(mylist))

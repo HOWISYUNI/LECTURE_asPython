@@ -15,11 +15,8 @@ mylist = [['A', 'B'], ['X', 'Y'], ['1']]
 
 
 # SOLUTIONS
-# 1 : sum함수
 
-
-
-# SOLUTION  : sequence type의 operations 사용
+# 1 : sequence type의 operations 사용
 def solution(mylist):
     answer = []
     for iter in mylist:
@@ -27,3 +24,26 @@ def solution(mylist):
     return answer
 
 print(solution(mylist))
+
+# 2 : sum함수
+answer = sum(my_list, [])
+
+# 3 : itertools.chain.from_iterable
+import itertools
+list(itertools.chain.from_iterable(my_list))
+
+# 4 : itertools.chain과 unpacking
+import itertools
+list(itertools.chain(*my_list))
+
+# 5 : list comprehension
+[element for array in my_list for element in array]
+
+# 6 : reduce 와 lambda
+from functools import reduce
+list(reduce(lambda x, y: x+y, my_list))
+
+# 7 : reduce 와 operator 모듈
+from functools import reduce
+import operator
+list(reduce(operator.add, my_list))

@@ -10,7 +10,7 @@
 # [[1], [2]]	[1, 2]
 # [['A', 'B'], ['X', 'Y'], ['1']]	['A', 'B', 'X' ,'Y', '1']
 
-mylist = [['A', 'B'], ['X', 'Y'], ['1']]
+my_list = [['A', 'B'], ['X', 'Y'], ['1']]
 
 
 
@@ -23,7 +23,7 @@ def solution(mylist):
         answer += iter # iterator type 중 sequence type의 operations들을 사용
     return answer
 
-print(solution(mylist))
+print(solution(my_list))
 
 # 2 : sum함수
 answer = sum(my_list, [])

@@ -19,10 +19,11 @@ multiplied = 1
 for value in input_value:
     multiplied *= value
     if math.sqrt(multiplied) == int(math.sqrt(multiplied)):
+        flag = False
         print('found')
         break
 
-if flag == False:
+if flag:
     print('Not found')
 
 #2 for-else

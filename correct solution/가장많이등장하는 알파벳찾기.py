@@ -14,5 +14,29 @@
 import collections
 
 my_str = input().strip()
-answer = collections.Counter(my_str)
-print(answer)
+countered = collections.Counter(my_str) # Counter 클래스는 collections에 속하고, collections는 dictionary를 상속하므로 Counter는 dictionary의 operation을 사용할 수 있다.
+print(countered)
+print(countered.most_common()) # Counter.most_common() : (key, value) 튜플로 이루어진 리스트를 반환
+print(countered.most_common(2)) # 숫자 인자를 넘겨주면 (key,value)리스트중 앞에서 인자갯수만큼 반환함.
+
+frequent_letter = countered.most_common(1)
+answer = []
+
+for key, value in countered.items():
+    if value == frequent_letter[0][1]:
+        answer.append(key)
+
+for letter in sorted(answer):
+    print(letter,end='')# end : print() 끝난 후 입력할 문자, sep은 string여러개가 하나의 print()로 출력될때 string사이 구분문자 지정
+
+# for lettter in frequent_letter:
+#     print(lettter)
+
+# for key in frequent_letter.keys():
+#     print(key)
+
+# for key, value in frequent_letter.items():
+#     print(key, value)
+
+# for item in frequent_letter.items():
+#     print(item)
